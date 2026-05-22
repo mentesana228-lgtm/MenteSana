@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test rápido anónimo - Mente Sana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo-brand solo-logo">
+      <img src="logo.png" alt="Logo de Mente Sana" class="logo-img" width="52" height="52" loading="lazy">
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrarme</a>
+      <a href="evaluacion-anonima.html">Test anónimo</a>
+      <a href="privacidad.html">Privacidad</a>
+      <button id="themeToggle" class="theme-nav" type="button" aria-label="Cambiar tema"></button>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <section class="hero reveal">
+      <span class="badge">Chequeo orientativo</span>
+      <h1>Test rápido y anónimo</h1>
+      <p>Puedes hacer este chequeo sin registrarte. Esta modalidad no guarda tu identidad y sirve para revisar de forma rápida cómo te sientes hoy.</p>
+
+      <div class="badges">
+        <span class="badge">Sin registro</span>
+        <span class="badge">Sin alias</span>
+        <span class="badge">Orientativo</span>
+      </div>
+    </section>
+  </main>
+
+  <main class="container section">
+    <section class="hero reveal">
+      <div class="progress-top">
+        <div>
+          <p class="mini-label">Progreso</p>
+          <h2><span id="preguntaActual">1</span> de <span id="totalPreguntas">8</span></h2>
+        </div>
+        <div class="progress-bar">
+          <div id="progresoFill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <form id="formTarjetas">
+        <div id="preguntasContainer"></div>
+
+        <div class="actions-eval">
+          <button type="button" id="btnAnterior" class="btn secundario">Anterior</button>
+
+          <div class="btn-row" style="margin-top:0">
+            <button type="button" id="btnSiguiente" class="btn principal">Siguiente</button>
+            <button type="submit" id="btnFinalizar" class="btn principal oculto">Ver resultado</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section id="resultadoBox" class="result-box oculto reveal">
+      <h2>Resultado orientativo anónimo</h2>
+
+      <div class="meter">
+        <div id="medidorCirculo" class="meter-circle">0</div>
+        <div>
+          <p class="mini-label">Estado general</p>
+          <h3 id="resultadoEstado">Estado emocional</h3>
+          <p id="resultadoMensaje">Aquí verás una orientación general según tus respuestas.</p>
+        </div>
+      </div>
+
+      <div class="recommend-box">
+        <p class="mini-label">Qué podrías hacer ahora</p>
+        <div id="resultadoRecomendaciones"></div>
+      </div>
+
+      <div class="btn-row">
+        <a href="registro.html" class="btn principal">Crear cuenta</a>
+        <a href="recursos.html" class="btn secundario">Ver herramientas</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

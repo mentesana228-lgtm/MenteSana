@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeZone - Panel de Bienestar</title>
+    <style>
+        :root {
+            --color-primario: #4A90E2; 
+            --color-secundario: #E8F4F8; 
+            --color-alerta: #FF6B6B; 
+            --color-calma: #2ecc71;
+            --texto-principal: #333333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        body { background-color: var(--color-secundario); color: var(--texto-principal); }
+
+        header {
+            background-color: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            display: block;
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        .perfil { font-weight: 500; color: #666; }
+
+        .dashboard-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .tarjeta-crisis {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 5px solid var(--color-alerta);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .btn-panico {
+            background-color: var(--color-alerta);
+            color: white;
+            border: none;
+            padding: 20px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-chat {
+            background-color: white;
+            color: var(--color-primario);
+            border: 2px solid var(--color-primario);
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .tarjeta-herramientas {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 5px solid var(--color-calma);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .ejercicio {
+            background-color: var(--color-secundario);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--color-primario);
+        }
+
+        .ejercicio h4 { color: var(--color-primario); margin-bottom: 5px; }
+        .ejercicio p { font-size: 0.9rem; color: #555; }
+        
+        .btn-ejercicio {
+            background-color: var(--color-primario);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo solo-logo">
+            <img src="logo.png" alt="Logo de Mente Sana" width="52" height="52" loading="lazy">
+        </a>
+        <div class="perfil">👤 Hola, <span id="alias-display">EstudianteEstelar</span></div>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="tarjeta-crisis">
+            <h2>🚨 Atención Inmediata</h2>
+            <p>Si sientes que estás en una crisis que no puedes manejar, estamos aquí para ti. Selecciona una opción:</p>
+            
+            <button class="btn-panico" onclick="alert('En una versión real, esto enviaría tu ubicación a la red de apoyo universitario.')">
+                Activar Botón de Alerta Segura
+            </button>
+            
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">
+                *El botón comparte tu ubicación actual con la vigilancia y primeros auxilios de la universidad.
+            </p>
+
+            <button class="btn-chat" onclick="alert('Abriendo chat cifrado de extremo a extremo...')">
+                Iniciar Chat Anónimo con Psicólogo
+            </button>
+        </section>
+
+        <section class="tarjeta-herramientas">
+            <h2>🌿 Herramientas de Calma</h2>
+            <p style="margin-bottom: 1.5rem;">Ejercicios rápidos para regular la ansiedad o el estrés.</p>
+
+            <div class="ejercicio">
+                <h4>Respiración 4-7-8</h4>
+                <p>Inhala por 4 segundos, mantén por 7, exhala por 8. Ayuda a reducir el ritmo cardíaco de inmediato.</p>
+                <button class="btn-ejercicio">Iniciar guía</button>
+            </div>
+
+            <div class="ejercicio">
+                <h4>Técnica de anclaje (5-4-3-2-1)</h4>
+                <p>Identifica 5 cosas que puedes ver, 4 que puedes tocar, 3 que puedes escuchar, 2 que hueles y 1 que saboreas.</p>
+                <button class="btn-ejercicio">Ver detalles</button>
+            </div>
+            
+            <div class="ejercicio">
+                <h4>Biblioteca Educativa</h4>
+                <p>Artículos sobre manejo del estrés académico y prevención del Burnout.</p>
+                <button class="btn-ejercicio">Ir a artículos</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

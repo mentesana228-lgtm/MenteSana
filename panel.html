@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel - Mente Sana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protegida="true">
+  <header class="header">
+    <a href="index.html" class="logo-brand solo-logo">
+      <img src="logo.png" alt="Logo de Mente Sana" class="logo-img" width="52" height="52" loading="lazy">
+    </a>
+
+    <nav class="nav">
+      <a href="panel.html">Panel</a>
+      <a href="evaluacion.html">Cómo me siento</a>
+      <a href="senales.html">Señales</a>
+      <a href="recursos.html">Herramientas</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="#" id="cerrarSesion">Cerrar sesión</a>
+      <button id="themeToggle" class="theme-nav" type="button" aria-label="Cambiar tema"></button>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <section class="panel-card reveal">
+      <h1>Hola, <span id="usuarioAlias">Estudiante</span></h1>
+      <p>Este es tu espacio personal para revisar cómo te sientes, reconocer señales de sobrecarga y usar herramientas de apoyo durante tu proceso universitario.</p>
+
+      <div class="panel-chip-group">
+        <span class="panel-chip">Sesión activa</span>
+        <span class="panel-chip">Seguimiento personal</span>
+        <span class="panel-chip">Acceso a herramientas</span>
+      </div>
+    </section>
+
+    <section class="cards-3 reveal" style="margin-top:20px">
+      <article class="card">
+        <h3>Chequeo emocional</h3>
+        <p>Haz tu evaluación personal con preguntas breves y un resultado orientativo.</p>
+        <a href="evaluacion.html" class="btn principal">Hacer evaluación</a>
+      </article>
+
+      <article class="card">
+        <h3>Señales de alerta</h3>
+        <p>Identifica cambios en sueño, concentración, energía, ansiedad y motivación.</p>
+        <a href="senales.html" class="btn secundario">Ver señales</a>
+      </article>
+
+      <article class="card">
+        <h3>Herramientas de apoyo</h3>
+        <p>Respiración guiada, descarga mental, plan de apoyo y solicitud de ayuda.</p>
+        <a href="recursos.html" class="btn secundario">Ir a herramientas</a>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

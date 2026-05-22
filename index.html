@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mente Sana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo-brand">
+      <img src="logo.png" alt="Logo de Mente Sana" class="logo-img" width="52" height="52" loading="lazy">
+      <span>MENTE SANA</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrarme</a>
+      <a href="evaluacion-anonima.html">Test anónimo</a>
+      <a href="privacidad.html">Privacidad</a>
+      <button id="themeToggle" class="theme-nav" type="button" aria-label="Cambiar tema"></button>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <section class="hero reveal">
+      <div class="hero-grid">
+        <div>
+          <div class="badges">
+            <span class="badge">Bienestar estudiantil</span>
+            <span class="badge">Herramienta académica</span>
+          </div>
+          <h1>Tu bienestar importa</h1>
+          <p>Mente Sana es un espacio diseñado para que puedas revisar cómo te sientes, reconocer señales de alerta y acceder a herramientas de apoyo durante tu proceso universitario.</p>
+          <div class="btn-row">
+            <a href="registro.html" class="btn principal">Crear cuenta</a>
+            <a href="evaluacion-anonima.html" class="btn secundario">Test anónimo</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel-card" style="height:100%">
+            <p class="mini-label">¿Cómo funciona?</p>
+            <h2>Tres pasos</h2>
+            <div style="margin-top:18px;display:flex;flex-direction:column;gap:14px">
+              <div class="chip">1. Responde el test de bienestar</div>
+              <div class="chip">2. Recibe un diagnóstico orientativo</div>
+              <div class="chip">3. Accede a herramientas de apoyo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cards-3" style="margin-top:22px">
+      <article class="card reveal">
+        <h3>Test de bienestar</h3>
+        <p>Evalúa cómo te sientes en cinco dimensiones: concentración, ansiedad, sueño, motivación y apoyo emocional.</p>
+        <a href="evaluacion-anonima.html" class="btn ghost">Comenzar</a>
+      </article>
+
+      <article class="card reveal">
+        <h3>Señales de alerta</h3>
+        <p>Aprende a identificar señales emocionales, físicas, académicas y sociales que indican que necesitas apoyo.</p>
+        <a href="senales.html" class="btn ghost">Ver señales</a>
+      </article>
+
+      <article class="card reveal">
+        <h3>Herramientas</h3>
+        <p>Accede a recursos de autorregulación: respiración guiada, diario emocional y lista de hábitos de cuidado.</p>
+        <a href="recursos.html" class="btn ghost">Explorar</a>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Mente Sana · Herramienta académica de orientación emocional estudiantil</p>
+    <div class="footer-links">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+      <a href="legal.html">Legal</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

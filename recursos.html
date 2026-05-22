@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas - Mente Sana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protegida="true">
+  <header class="header">
+    <a href="index.html" class="logo-brand solo-logo">
+      <img src="logo.png" alt="Logo de Mente Sana" class="logo-img" width="52" height="52" loading="lazy">
+    </a>
+
+    <nav class="nav">
+      <a href="panel.html">Panel</a>
+      <a href="evaluacion.html">Cómo me siento</a>
+      <a href="senales.html">Señales</a>
+      <a href="recursos.html">Herramientas</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="#" id="cerrarSesion">Cerrar sesión</a>
+      <button id="themeToggle" class="theme-nav" type="button" aria-label="Cambiar tema"></button>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <section class="panel-card reveal">
+      <h1>Herramientas prácticas de apoyo</h1>
+      <p>Este espacio ya no es solo informativo. Incluye ayudas breves y utilizables para estudiantes que necesitan regularse, ordenar pensamientos y preparar una solicitud de ayuda.</p>
+
+      <div class="panel-chip-group">
+        <span class="panel-chip">Respiración guiada</span>
+        <span class="panel-chip">Plan de crisis breve</span>
+        <span class="panel-chip">Organización emocional</span>
+      </div>
+    </section>
+
+    <section class="tool-grid reveal" style="margin-top:20px">
+      <article class="tool-card">
+        <h3>Guía de respiración</h3>
+        <p>Úsala cuando sientas ansiedad, saturación o bloqueo académico.</p>
+        <div id="breathVisual" class="breath-visual">Inhala</div>
+        <div class="btn-row">
+          <button class="btn principal" id="startBreathing">Iniciar</button>
+          <button class="btn secundario" id="stopBreathing">Detener</button>
+        </div>
+        <div class="tool-output" id="breathText">Sigue el ritmo visual: inhala, sostén y exhala lentamente.</div>
+      </article>
+
+      <article class="tool-card">
+        <h3>Descarga mental guiada</h3>
+        <p>Escribe lo que te abruma y separa lo que requiere acción inmediata de lo que puede esperar.</p>
+        <textarea id="mentalDumpInput" placeholder="Escribe aquí lo que sientes, lo que te preocupa o lo que tienes pendiente..."></textarea>
+        <div class="btn-row">
+          <button class="btn principal" id="processDump">Organizar</button>
+        </div>
+        <div class="tool-output" id="mentalDumpOutput">Aquí aparecerá una organización simple de tus ideas.</div>
+      </article>
+
+      <article class="tool-card">
+        <h3>Mini plan de apoyo</h3>
+        <p>Marca lo que necesitas hoy para salir del bloqueo y generar una acción concreta.</p>
+        <div class="checklist">
+          <label><input type="checkbox" value="Tomar agua y respirar 3 minutos">Tomar agua y respirar 3 minutos</label>
+          <label><input type="checkbox" value="Escribir a una persona de confianza">Escribir a una persona de confianza</label>
+          <label><input type="checkbox" value="Reducir tareas a una sola prioridad">Reducir tareas a una sola prioridad</label>
+          <label><input type="checkbox" value="Pedir cita o apoyo institucional">Pedir cita o apoyo institucional</label>
+        </div>
+        <div class="btn-row">
+          <button class="btn principal" id="buildPlan">Crear plan</button>
+        </div>
+        <div class="tool-output" id="planOutput">Tu plan breve aparecerá aquí.</div>
+      </article>
+
+      <article class="tool-card">
+        <h3>Preparar solicitud de ayuda</h3>
+        <p>Genera un texto simple para pedir apoyo a bienestar universitario, docente o familiar.</p>
+        <input id="helpTarget" type="text" placeholder="Ej. Bienestar universitario, profesor, mamá, amigo">
+        <textarea id="helpContext" placeholder="Ej. Me siento saturado/a, me cuesta concentrarme y necesito orientación."></textarea>
+        <div class="btn-row">
+          <button class="btn principal" id="generateHelpMessage">Generar mensaje</button>
+        </div>
+        <div class="tool-output" id="helpMessageOutput">Aquí se generará un mensaje base que puedes copiar y enviar.</div>
+      </article>
+    </section>
+
+    <p class="small-note container">Estas herramientas son de orientación y apoyo inicial. No reemplazan atención psicológica ni servicios de emergencia.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

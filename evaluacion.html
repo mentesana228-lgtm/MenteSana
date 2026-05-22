@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo me siento hoy - Mente Sana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protegida="true">
+  <header class="header">
+    <a href="index.html" class="logo-brand solo-logo">
+      <img src="logo.png" alt="Logo de Mente Sana" class="logo-img" width="52" height="52" loading="lazy">
+    </a>
+
+    <nav class="nav">
+      <a href="panel.html">Panel</a>
+      <a href="evaluacion.html">Cómo me siento</a>
+      <a href="senales.html">Señales</a>
+      <a href="recursos.html">Herramientas</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="#" id="cerrarSesion">Cerrar sesión</a>
+      <button id="themeToggle" class="theme-nav" type="button" aria-label="Cambiar tema"></button>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <section class="panel-card reveal">
+      <span class="badge">Chequeo de bienestar</span>
+      <h1>¿Cómo te has sentido últimamente?</h1>
+      <p>Este espacio fue diseñado para ayudarte a reconocer señales de cansancio, ansiedad, desmotivación o necesidad de apoyo. No busca juzgarte ni darte una etiqueta, sino orientarte con más claridad y cuidado.</p>
+    </section>
+
+    <section class="hero reveal" style="margin-top:20px">
+      <div class="progress-top">
+        <div>
+          <p class="mini-label">Avance del chequeo</p>
+          <h2><span id="preguntaActual">1</span> de <span id="totalPreguntas">10</span></h2>
+        </div>
+        <div class="progress-bar">
+          <div id="progresoFill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <form id="formTarjetas">
+        <div id="preguntasContainer"></div>
+
+        <div class="actions-eval">
+          <button type="button" id="btnAnterior" class="btn secundario">Anterior</button>
+
+          <div class="btn-row" style="margin-top:0">
+            <button type="button" id="btnSiguiente" class="btn principal">Siguiente</button>
+            <button type="submit" id="btnFinalizar" class="btn principal oculto">Ver orientación</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section id="resultadoBox" class="result-box oculto reveal">
+      <h2>Orientación personalizada</h2>
+
+      <div class="meter" style="align-items:start">
+        <div id="medidorCirculo" class="meter-circle">0%</div>
+        <div>
+          <p class="mini-label">Lectura general</p>
+          <h3 id="resultadoEstado">Estado emocional</h3>
+          <p id="resultadoMensaje">Aquí verás una lectura cuidadosa de tus respuestas.</p>
+        </div>
+      </div>
+
+      <div class="recommend-box">
+        <p class="mini-label">Lo que hoy necesita más atención</p>
+        <div id="resultadoRecomendaciones"></div>
+      </div>
+
+      <div class="recommend-box" style="margin-top:16px">
+        <p class="mini-label">Siguiente paso sugerido</p>
+        <div id="resultadoPaso"></div>
+      </div>
+
+      <div class="btn-row">
+        <a href="recursos.html" class="btn principal">Ir a herramientas</a>
+        <a href="panel.html" class="btn secundario">Volver al panel</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
